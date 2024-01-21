@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!--    creating bean by value as an element-->
+
+    <!--<bean class="org.example.injectreference.B" name="bref">
+        <property name="Name">
+            <value>ClassA</value>
+        </property>
+    </bean>
+
+    <bean class="org.example.injectreference.A" name="aref">
+        <property name="Name">
+            <value>ClassB</value>
+        </property>
+        <property name="b">
+            <ref bean="bref"/>
+        </property>
+    </bean>-->
+
+<!--Creating bean by value as an attribute-->
+
+<!--    <bean class="org.example.injectreference.B" name="bref">
+        <property name="Name" value="ClassB"/>
+    </bean>
+
+    <bean class="org.example.injectreference.A" name="aref">
+        <property name="Name" value="ClassA"/>
+        <property name="b" ref="bref"/>
+    </bean>-->
+
+<!--    Creating bean using p schema-->
+
+    <bean class="org.example.injectreference.B" name="bref" p:Name="ClassB"/>
+
+    <bean class="org.example.injectreference.A" name="aref" p:Name="ClassA" p:b-ref="bref"/>
+
+</beans>

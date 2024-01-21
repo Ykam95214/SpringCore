@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    Creating bean with Value as an element-->
+    <bean class="org.example.collections.Employee" name="Employee1">
+        <property name="name" value="Kamalesh"/>
+        <property name="employeeId" value="1452"/>
+        <property name="Addresses">
+            <list>
+                <value>Srinilaya Nest</value>
+                <value>Surajpur</value>
+            </list>
+        </property>
+
+        <property name="mobileNumbers">
+            <set>
+                <value>7839893450</value>
+                <value>7607793450</value>
+            </set>
+        </property>
+
+        <property name="Courses">
+            <map>
+                <entry key="PSCP" value="123"/>
+                <entry key="DSA" value="254"/>
+            </map>
+        </property>
+
+    </bean>
+
+</beans>
