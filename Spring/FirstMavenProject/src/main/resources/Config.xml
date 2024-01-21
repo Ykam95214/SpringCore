@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    Creating bean with Value as an element-->
+    <bean class="org.example.Student" name="student1">
+        <property name="studentId">
+            <value>1</value>
+        </property>
+
+        <property name="studentName">
+            <value>Nitish</value>
+        </property>
+
+        <property name="studentMobileNumber">
+            <value>7839893450</value>
+        </property>
+
+        <property name="studentAddress">
+            <value>Surajpur,Mau UP 276306</value>
+        </property>
+
+    </bean>
+
+<!--    Create bean using value as an attribue-->
+
+    <bean class="org.example.Student" name="student2">
+
+        <property name="studentId" value="02"/>
+        <property name="studentName" value="Raghu"/>
+        <property name="studentMobileNumber" value="6235847526"/>
+        <property name="studentAddress" value="Boriwali"/>
+
+    </bean>
+
+<!--    Create bean using p schema-->
+
+    <bean class="org.example.Student" name="student3" p:studentId="03" p:studentName="Kamlesh" p:studentMobileNumber="7584578452" p:studentAddress="Hyderabad" />
+
+</beans>
